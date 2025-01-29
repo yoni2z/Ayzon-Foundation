@@ -134,8 +134,8 @@ export const Navbar = () => {
             )}
           </li>
           <li>
-            <Link to="/actions" onClick={closeMenu}>
-              TAKE ACTION
+            <Link to="/getinvolved" onClick={closeMenu}>
+              GET INVOLVED
             </Link>
           </li>
         </ul>

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "./index.css";
 import ActionSection from "./Pages/ActionSection/ActionSection";
 import Blog from "./Pages/Blog/Blog";
@@ -44,7 +49,7 @@ function AppContent() {
       {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/actions" element={<ActionSection />} />
+        <Route path="/getinvolved" element={<ActionSection />} />
         <Route
           path="/blogs"
           element={
