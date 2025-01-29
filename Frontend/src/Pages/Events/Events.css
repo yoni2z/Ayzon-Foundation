@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:ital@0;1&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.event-bg-container {
+  background-position: center;
+  height: 25vh;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #eaeaea;
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./Assets/Events.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  /* Adjust opacity */
+  transform: scale(0.9);
+  /* Scale the image */
+  z-index: -1;
+}
+
+.events_txt {
+  margin-top: 2.5%;
+  color: #333;
+  font-family: "Playfair Display", serif;
+  font-size: 3.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2.5%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.tab {
+  padding: 12px 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  color: #333;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.tab.active {
+  color: #00bade;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-underline-position: below;
+}
+
+.tabs .tab:hover {
+  color: #00bade;
+  font-weight: 600;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.event-card {
+  display: flex;
+  background: linear-gradient(to right,
+      rgba(127, 127, 127, 1),
+      rgba(127, 127, 127, 0));
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-date {
+  background-color: #7f7f7f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  border-right: 2px solid #eaeaea;
+}
+
+.event-date .month {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.event-date .day {
+  font-size: 64px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.event-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Event Details */
+.event-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.event-title {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.event-description {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.register-button {
+  padding: 12px 24px;
+  background-color: #00bade;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.register-button:hover {
+  transform: scale(1.05);
+  background-color: #0082ded2;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .event-image {
+    overflow: hidden;
+    opacity: 0.4;
+  }
+
+  .events_txt {
+    font-size: 30px;
+    bottom: 60px;
+  }
+
+  .tabs {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-right: 10px;
+  }
+
+  .events-container {
+    margin: 20px;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date {
+    width: 100%;
+    margin-bottom: 20px;
+    border-right: none;
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  .event-details {
+    padding: 15px;
+  }
+
+  .register-button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-image {
+    overflow: hidden;
+    opacity: 0.4;
+    object-fit: cover;
+  }
+
+  .event-title {
+    font-size: 28px;
+  }
+
+  .event-description {
+    font-size: 16px;
+  }
+
+  .register-button {
+    font-size: 0.9em;
+  }
+
+  .events_txt {
+    font-size: 24px;
+    bottom: 40px;
+  }
+}

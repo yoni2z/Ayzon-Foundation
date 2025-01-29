@@ -1,0 +1,64 @@
+/* EventPage.css */
+.event-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-summary {
+    display: flex;
+    align-items: center;
+}
+
+.event-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.event-info h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.event-info button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-info button:hover {
+    background-color: #0056b3;
+}
+
+.event-details {
+    margin-top: 20px;
+}
+
+.event-images img,
+.event-sponsors img,
+.event-guests img {
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.event-sponsors,
+.event-guests {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.event-sponsors div,
+.event-guests div {
+    text-align: center;
+    margin-right: 20px;
+}

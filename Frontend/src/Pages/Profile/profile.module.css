@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+.profileContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.profileLeftcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    box-sizing: border-box;
+    border-right: 3px solid hsl(192, 14%, 84%);
+    flex:7;
+    gap:40px;
+}
+.profileRightcont{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px;
+    justify-content: start;
+    flex: 13;
+    padding: 50px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    gap: 40px;
+    min-width: 600px;
+}
+.profileImagecont{
+    display: flex;
+    width: 200px;
+    height:200px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(89, 89, 177);
+    border-radius: 50% 50% 50% 10% / 50% 50% 50% 10% ;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 0;
+}
+.profileImage{
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+}
+.outerBullet{
+    border: 3px solid rgb(76, 76, 155);
+    width:25px;
+    height:25px;
+    background-color: white;
+    transform: rotateZ(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16% 16% 16% 16%;
+}
+.innerBullet{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(76, 76, 155) ;
+    border-radius: 16% 16% 16% 16%;
+}
+.graduateSkills{
+    display: flex;
+    flex-direction: column;
+}
+.profileTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.shecanProfileTitle{
+    font-family: "Playfair Display",serif;
+    font-size: 28px;
+    font-weight: 900;
+}
+.skillList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.skillList li{
+    background-color: rgb(130, 155, 161);
+    font-family: 'Montserrat', serif;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: start;
+    padding: 5px;
+}
+.skillList .langProficiency,.skillList .certifier{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat",serif;
+    font-style: italic;
+    align-self: flex-start;
+    color:rgb(121, 118, 118);
+}
+.graduateSkills .skillList li{
+    text-align: center;
+}
+.graduateLanguages,.graduateSkills,.graduateCertificates,.graduateHonorsAwards,.graduateInterests{
+    align-self: flex-start;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.graduateLanguages li,.graduateCertificates li,.graduateHonorsAwards li,.graduateInterests li{
+    background-color: white;
+    color: black;
+}
+.graduateName{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.graduateprofession{
+    font-family: 'Playfair Display' serif;
+    color:#ff5349;
+    font-weight: 600;
+    font-size: 25px;
+}
+.graduateDiscription{
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 600;
+}
+.graduateContact{
+    list-style: none;
+    color:#ff5349;
+    display: flex;
+    justify-content: start;
+    column-gap:150px;
+    flex-wrap: wrap;
+}
+.graduateContact li{
+    font-size: 16px;
+    width: 300px;
+}
+.graduateWorkExperience .graduateprofession{
+    color: black;
+}
+.companyName{
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+.startDate{
+    font-size: 14px;
+    color: #ff5349;
+    font-family: "Montserrat", serif;
+    font-style: italic;
+}
+.locationOfCompany{
+    font-size: 16px;
+    color: #ff5349;
+    font-family: "Montserrat", serif;
+    font-style: italic;
+    margin-left: auto;
+}
+.date_location{
+    display: flex;
+    width:100%;
+}
+.graduateWorkExperience,.graduateEducation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    align-self: flex-start;
+}
+.workExperienceStatements{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    list-style:circle;
+    font-weight: 600;
+}
+.workExperienceStatements li{
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+}
+.graduateEducation .graduateprofession{
+    color:black;
+}
+.graduateInterests .skillList{
+    align-items: flex-start;
+}
+@media (max-width:600px){
+    .profileLeftcont .profileTitle .shecanProfileTitle{
+        font-size: 55px;
+    }
+    .profileRightcont .profileTitle .shecanProfileTitle{
+        font-size: 55px;
+    }
+    .profileRightcont .graduateName{
+        font-size: 55px;
+    }
+    .profileRightcont .workExperienceStatements li{
+        font-size: 25px;
+        min-width: 100px;
+    }
+    .profileContainer .profileLeftcont{
+        flex:1;
+        gap:10px;
+    }
+    .profileContainer .profileRightcont{
+        flex:2;
+        min-width: 800px;
+    }
+    .graduateWorkExperience .companyName{
+        font-size: 40px ;
+    }
+}
+
+/* @media query to hide navbar and other elements during print */
+@media print {
+    /* Hide Download Button (or any other elements you want to hide) */
+    .printButton {
+        display: none;
+    }
+
+    /* Ensure the profile page is formatted well */
+    .profileContainer {
+        margin: 20px;
+    }
+
+    /* Ensure images and content fit well in the printed page */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Optional: Adjust the layout for print */
+    .profileLeftcont,
+    .profileRightcont {
+        float: left;
+        width: 48%;
+        margin-right: 2%;
+    }
+
+    .profileRightcont {
+        width: 48%;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,92 @@
+/* Hero Section container */
+.hero-container {
+    width: 100%;
+    margin: 2rem auto;
+    overflow-x: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/* Hero Items Wrapper */
+.hero-items {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Item Card */
+.hero-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 6rem;
+    /* Fixed width for consistency */
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.hero-item:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Icon */
+.hero-icon {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+/* Hero Text */
+.hero-title {
+    font-size: 0.875rem;
+    /* Text size equivalent to 'text-sm' */
+    color: #333;
+}
+
+/* Responsive Design */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .hero-items {
+        gap: 0.5rem;
+    }
+
+    .hero-item {
+        width: 5rem;
+    }
+
+    .hero-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .hero-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 0.5rem;
+    }
+
+    .hero-item {
+        width: 4.5rem;
+    }
+
+    .hero-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .hero-text {
+        font-size: 0.75rem;
+    }
+}

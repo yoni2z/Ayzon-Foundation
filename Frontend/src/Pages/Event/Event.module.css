@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.evContainer {
+    min-width: 100vh;
+    /* overflow-x: hidden; */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.event_background_top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 450px;
+    justify-content: center;
+}
+
+.evImage {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(85%);
+}
+
+.topCont {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.evDescription {
+    align-self: center;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 160px;
+}
+
+@media (max-width: 500px) {
+    .evDescription {
+        padding: 10px;
+    }
+}
+
+.evName {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+}
+
+.evPlace {
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.evBodyCont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 20%);
+    gap: 30px;
+    padding: 20px;
+}
+
+.evBody {
+    position: relative;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    justify-content: center;
+    gap: 80px;
+}
+
+.ev_Paragraph_description {
+    width: 400px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.ev_body_image {
+    display: flex;
+    height: 250px;
+    width: 300px;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.body_img {
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+    align-self: center;
+}
+
+.evDescPara {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 20px;
+    color: #dcdcdc;
+}
+
+.timeLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: center;
+    padding: 20px 30px;
+    background-color: rgba(23, 48, 58, 0.85);
+    width: fit-content;
+    min-width: 100px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.timeCont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeCont div {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+    padding: 5px;
+}
+
+.daysLeft,
+.hoursLeft,
+.minuetsLeft,
+.secondsLeft {
+    background-color: #ff6f61;
+    color: white;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeLabel {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+.evSpeakers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.evSpeaker {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    width: 180px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evSpeaker:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.evSpeakerPhoto {
+    width: 180px;
+    height: 180px;
+}
+
+.evSpPic {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.evSpPic:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.evSpeakerName {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.evSpDescription {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    max-width: 180px;
+    text-align: center;
+}
+
+.speakersH1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ff6f61;
+}
+
+.evRegistrationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: hsl(0, 0%, 20%);
+    padding: 60px;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.evRegisterbtn {
+    padding: 15px;
+    background-color: #ff6f61;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-size: 1.1em;
+    color: white;
+}
+
+.evRegisterbtn:hover {
+    transform: scale(1.1);
+    background-color: #e14a44;
+    color: white;
+}
+
+.evInput {
+    height: 40px;
+    font-size: 1.1em;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #ddd;
+    transition: 0.2s ease;
+}
+
+.evRegH1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+.eventSponsors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.evSponsorLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.evSponsorLogoImg {
+    object-fit: cover;
+    width: 120px;
+    height: auto;
+}
+
+.eventClosedCont {
+    background-color: #ff6f61;
+    padding: 40px;
+    text-align: center;
+}
+
+.eventClosed {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+}

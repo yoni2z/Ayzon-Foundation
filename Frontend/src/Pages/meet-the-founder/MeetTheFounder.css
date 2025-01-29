@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.mmet-the-founder {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.title-h1 {
+  font-weight: 700;
+  font-family: "playfair";
+}
+
+.title-h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ff5349;
+}
+
+.founder-description,
+.highlight-description {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+.banner {
+  background: url("./assets/bannerimg.png") no-repeat center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.banner-dark {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.banner-title {
+  text-align: center;
+  font-size: 4em;
+  margin-top: 12%;
+}
+
+.section {
+  padding: 5vh 5vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  margin-top: 5%;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.founder-image,
+.highlight-image {
+  flex: 1;
+  max-width: 32vw;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.founder-text,
+.highlight-text {
+  flex: 1;
+  padding: 2vh;
+}
+
+.founder-message {
+  margin-top: 5%;
+}
+
+.message-title {
+  text-align: center;
+  font-size: 2em;
+  color: #ff5349;
+}
+
+.message-content {
+  font-size: 1.2em;
+  text-align: center;
+  color: #7f7f7f;
+  padding: 5vh 5vw;
+}
+
+.founder-contact {
+  align-items: center;
+  justify-content: center;
+  color: #7f7f7f;
+  display: flex;
+  gap: 7.5%;
+  padding: 10vh 5vw 0 5vw;
+}
+
+.contact-details {
+  padding-left: 2.5%;
+  border: none;
+  border-left: #444;
+  border-left: solid;
+}
+
+.contact-link {
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2vh;
+  }
+
+  .founder-image,
+  .highlight-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .founder-text,
+  .highlight-text {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .title-h2 {
+    font-size: 2em;
+  }
+
+  .founder-description,
+  .highlight-description {
+    font-size: 1em;
+  }
+
+  .message-title {
+    font-size: 1.5em;
+  }
+
+  .message-content {
+    font-size: 1em;
+  }
+
+  .founder-contact {
+    flex-direction: column;
+    gap: 3vh;
+    padding: 5vh 2vw 0 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title-h2 {
+    font-size: 1.5em;
+  }
+
+  .contact-link {
+    font-size: 0.9em;
+  }
+
+  .contact-details {
+    padding-left: 0;
+    border: none;
+  }
+}

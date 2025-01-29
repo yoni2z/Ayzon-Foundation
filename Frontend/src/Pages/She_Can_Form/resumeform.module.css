@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+.resumeFormContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    gap: 20px;
+    /* Added gap for better spacing between sections */
+}
+
+.leftResContainer,
+.rightResContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.leftResContainer {
+    border-right: 2px solid #d0d0d0;
+    flex: 1;
+    min-width: 300px;
+    /* Ensure left container has a minimum width */
+}
+
+.rightResContainer {
+    flex: 2;
+    min-width: 400px;
+    /* Ensure right container has a minimum width */
+}
+
+.picUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    width: max-content;
+}
+
+.skill,
+.resLang,
+.resCertificates,
+.resAwards,
+.resInterest {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.langFields,
+.certificateFields,
+.awardFields {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+.gradName,
+.gradId,
+.gradProfession {
+    display: flex;
+    flex-direction: column;
+}
+
+.gradName label,
+.gradProfession label,
+.self_description label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.leftResContainer h3,
+.rightResContainer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.self_description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resumeFormContainer textarea {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.self_description textarea {
+    height: 10rem;
+}
+
+.socialMediaLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.socialMediaLinks input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.workExperience,
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workExperience input,
+.education input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.workExperience div,
+.education div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workExperience div div,
+.education div div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+}
+
+.workExperience textarea,
+.education textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.resumeFormContainer button {
+    border: none;
+    background-color: #ff5349;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resumeFormContainer button:hover {
+    background-color: #e94f40;
+}
+
+.skill input,
+.resInterest input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formSubmitBtn {
+    background-color: #ff5349;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.formSubmitBtn:hover {
+    background-color: #e94f40;
+}
+
+.resumeFormContainer label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.resumeFormContainer input,
+.resumeFormContainer textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Default Responsive Breakpoints */
+@media (max-width: 768px) {
+    .resumeFormContainer {
+        padding: 20px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .leftResContainer,
+    .rightResContainer {
+        padding: 10px 0;
+        border: none;
+    }
+
+    .leftResContainer h3,
+    .rightResContainer h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .picUpload {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .skill input,
+    .resInterest input,
+    .socialMediaLinks input,
+    .workExperience input,
+    .education input {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .resumeFormContainer button,
+    .formSubmitBtn {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .workExperience div div,
+    .education div div {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .resumeFormContainer textarea {
+        height: 8rem;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+/* Ultra-Small Devices Breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+    .resumeFormContainer {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .leftResContainer h3,
+    .rightResContainer h3 {
+        font-size: 18px;
+    }
+
+    .picUpload {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .skill input,
+    .resInterest input,
+    .socialMediaLinks input,
+    .workExperience input,
+    .education input {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .resumeFormContainer textarea {
+        height: 7rem;
+        font-size: 14px;
+    }
+
+    .workExperience div div,
+    .education div div {
+        gap: 10px;
+    }
+
+    .resumeFormContainer button,
+    .formSubmitBtn {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+/* Tiny Devices Breakpoint (max-width: 360px) */
+@media (max-width: 360px) {
+    .resumeFormContainer {
+        padding: 10px;
+    }
+
+    .leftResContainer h3,
+    .rightResContainer h3 {
+        font-size: 16px;
+    }
+
+    .picUpload {
+        padding: 5px;
+    }
+
+    .skill input,
+    .resInterest input,
+    .socialMediaLinks input,
+    .workExperience input,
+    .education input {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .resumeFormContainer textarea {
+        height: 6rem;
+        font-size: 13px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .resumeFormContainer button,
+    .formSubmitBtn {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+/* Ultra-Tiny Devices Breakpoint (max-width: 320px) */
+@media (max-width: 320px) {
+    .resumeFormContainer {
+        padding: 5px;
+    }
+
+    .leftResContainer h3,
+    .rightResContainer h3 {
+        font-size: 14px;
+    }
+
+    .picUpload {
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .skill input,
+    .resInterest input,
+    .socialMediaLinks input,
+    .workExperience input,
+    .education input {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .resumeFormContainer textarea {
+        height: 5rem;
+        font-size: 12px;
+    }
+
+    .resumeFormContainer button,
+    .formSubmitBtn {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

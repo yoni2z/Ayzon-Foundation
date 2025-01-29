@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+.header {
+  text-align: center;
+  width: 100%;
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 72px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: white;
+  align-self: center;
+  justify-content: center;
+  padding-top: 8rem;
+}
+
+.sus_description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.sus_description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: black;
+  text-align: justify;
+  max-width: 600px;
+  height: 165px;
+  padding-left: 10rem;
+}
+
+.sus_description img {
+  padding-left: 4rem;
+}
+
+.QualityEducation img,
+.WomAndYou img,
+.Wash img {
+  width: 500px;
+  height: auto;
+  padding-right: 4rem;
+}
+
+.Wash img {
+  padding-right: 0;
+  padding-left: 64px;
+}
+
+.Wash,
+.WomAndYou,
+.QualityEducation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.QualityEducation {
+  margin-left: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  padding-right: 9rem;
+  padding-bottom: 3.5rem;
+}
+
+.title img {
+  width: 78.15px;
+  height: 78.15px;
+  padding: 0;
+  margin: 0;
+}
+
+.title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #000000;
+  text-align: left;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+}
+
+.description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: black;
+  text-align: justify;
+  max-width: 600px;
+  width: 550px;
+  height: auto;
+  padding-bottom: 3.5rem;
+}
+
+.description button {
+  background-color: #ff5349;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  align-self: center;
+}
+
+@media (max-width: 600px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+  }
+
+  .header h1 {
+    font-size: 45px;
+    padding-top: 9vh;
+  }
+
+  .sus_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  .sus_description p {
+    margin: 4em 0 3rem 0;
+    padding: 0;
+    height: fit-content;
+  }
+
+  .sus_description img {
+    width: 80%;
+    height: auto;
+    padding: 0%;
+  }
+
+  .WomAndYou,
+  .QualityEducation {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+  }
+
+  .QualityEducation {
+    margin-top: 0px;
+  }
+
+  .Wash {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+
+  .QualityEducation img,
+  .WomAndYou img,
+  .Wash img {
+    width: 100% !important;
+    height: auto;
+    margin: 2rem 0 0 0;
+    padding: 0;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .title img {
+    width: 78.15px !important;
+    height: 78.15px !important;
+  }
+
+  .description {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .description p {
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+    margin: 0;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  .Wash img {
+    padding-left: 0rem !important;
+    width: 100%;
+    height: auto;
+  }
+
+  .description button {
+    margin: 3rem;
+  }
+}
+

@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Playfair+Display:ital@0;1&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+  font-weight: 100;
+  margin-top: 50%;
+}
+
+.project-top {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.project-image {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.progress-bar {
+  height: 25vh;
+  margin: 0;
+  padding: 5%;
+  margin-bottom: 5%;
+}
+
+.progress-bar-txt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1%;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+}
+
+.project-intro {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.fund-progress {
+  padding: 3%;
+}
+
+.fund-progress .circular-progress-text {
+  position: absolute;
+  text-align: center;
+  max-width: 16vw;
+}
+
+.fund-progress .percentage {
+  font-size: 8em;
+  color: #ff5349;
+  font-weight: bold;
+}
+
+.fund-progress .circular-progress-bar {
+  stroke-width: 10;
+}
+
+.intro-txt {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.intro-header {
+  font-size: 4em;
+  font-style: black;
+  margin-bottom: 3%;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+
+.intro-body {
+  font-size: 1.2em;
+  justify-content: center;
+  text-align: justify;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+}
+
+.project-components {
+  justify-content: center;
+}
+
+.components-title {
+  text-align: center;
+  margin: 3%;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 4em;
+  color: #ff5349;
+}
+
+.components-card-grid {
+  display: flex;
+  gap: 2.5vw;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 0;
+  margin-left: 5%;
+}
+
+.project-description {
+  padding: 0;
+  margin: 0;
+}
+
+.desc-title {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 3%;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.desc-title-h1 {
+  margin-right: 1%;
+}
+
+.desc-title-h2 {
+  color: #ff5349;
+}
+
+.desc-details {
+  margin: 5vh 0 10vh 5vw;
+  width: 90vw;
+  justify-content: center;
+  text-align: justify;
+  align-self: center;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.project-video-head {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+.lookthrough-image {
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  transform: scale(145%);
+  object-fit: cover;
+}
+
+.project-look-through {
+  position: absolute;
+  background: none;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.lookthrough-h1 {
+  margin-right: 0.3em;
+  background: none;
+}
+
+.lookthrough-h2 {
+  color: #ff5349;
+  background: none;
+}
+
+.project-video {
+  margin-bottom: 10%;
+}
+
+.project-video .video-container {
+  height: auto;
+}
+
+.project-donors-head {
+  margin: 5%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donorsbg-image {
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  transform: scale(55%);
+}
+
+.project-donors-title {
+  position: absolute;
+  background: none;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.project-donors-h1 {
+  background: none;
+  color: #ff5349;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.donor-comp-head,
+.donor-people-head {
+  margin-left: 7%;
+  margin-bottom: 3%;
+}
+
+.donor-comp-title,
+.donor-people-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #454544;
+}
+
+.donor-companies-list,
+.donor-people-list {
+  display: flex;
+  gap: 6.5vw;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 0;
+  margin-left: 7%;
+}
+
+@media (max-width: 450px) {
+  .project-intro {
+    flex-direction: column;
+  }
+
+  .fund-progress .percentage {
+    font-size: 6em;
+    font-weight: bold;
+  }
+
+  .fund-progress {
+    display: none;
+  }
+
+  .project-top {
+    overflow: hidden;
+    height: 40vh;
+    margin-bottom: 5vh;
+  }
+
+  .project-look-through,
+  .desc-title,
+  .project-donors-h1,
+  .components-title {
+    font-size: 2em;
+  }
+
+  .donor-comp-title,
+  .donor-people-title,
+  .intro-header {
+    font-size: 1.5em;
+  }
+
+  .intro-body {
+    font-size: 1em;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+  }
+
+  .components-card-grid .card-image {
+    height: 30vh;
+  }
+
+  .components-card-grid .card-content {
+    height: 25vh;
+  }
+
+  .components-card-grid .progress-container {
+    display: none;
+  }
+
+  .donor-companies-list .donor-card,
+  .donor-people-list .donor-card {
+    width: 150px;
+  }
+}

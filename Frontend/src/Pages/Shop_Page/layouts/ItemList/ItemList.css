@@ -1,0 +1,28 @@
+.item-list-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.item-list-main {
+    flex: 1;
+}
+
+@media (min-width: 640px) {
+    .item-list-container {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .item-list-container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 639px) {
+    .item-list-container {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,132 @@
+.programContainer {
+    margin-top: 5rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.programHeader {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100vw;
+    padding: 2rem;
+    background-color: darkgray;
+}
+
+.programTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #333333;
+}
+
+.programDescription {
+    font-size: 16px;
+    color: #555555;
+    margin: 10px 0;
+}
+
+.programSpan {
+    margin-top: 10px;
+}
+
+.programUnderline {
+    width: 100px;
+    height: 4px;
+    background-color: #ff5349;
+    display: block;
+    margin: 0 auto;
+}
+
+.qeProjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.qeProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    height: 450px;
+    border: 2px solid #dcdcdc;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.qeProject:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e04139;
+    z-index: 2;
+}
+
+.qeProjectImage {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qeProjectpic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qeProjBody {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.projectTitleh2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.qeprojectDesc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    max-height: 100px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.qeReadmore {
+    background-color: #ff5349;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.qeReadmore:hover {
+    background-color: #e04139;
+    color: black;
+}

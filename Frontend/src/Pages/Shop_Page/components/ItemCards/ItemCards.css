@@ -1,0 +1,66 @@
+/* Item Card Container */
+.item-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 400px;
+    font-family: "Montserrat", sans-serif;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-card:hover {
+    transform: scale(1.1);
+}
+
+/* Item Image */
+.item-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+/* Item Description */
+.item-description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Item Price */
+.item-price {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    .item-card {
+        width: 95%;
+    }
+
+    .item-description,
+    .item-price {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .item-card {
+        width: 100%;
+    }
+
+    .item-description,
+    .item-price {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.containerSc {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0;
+}
+
+.headerSc {
+  background-image: url("./Shecan_images/shecan_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.headerSc h1 {
+  font-family: "Playfair Display", sans-serif;
+  color: white;
+  font-size: 54px;
+}
+
+.she_can_trainees {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 1rem;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
+}
+
+.search_container_sc {
+  padding: 2rem;
+}
+
+.search_container_sc h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  width: fit-content;
+}
+
+.search_fields_sc {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 1rem;
+}
+
+.search_fields_sc input {
+  width: 40%;
+  height: 3rem;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 3px;
+  box-shadow: 1px 2px 2px #dadada, -1px 2px 1px #dadada;
+  border: 1px solid white;
+}
+
+.search_fields_sc select {
+  width: 40%;
+  height: 3rem;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 3px;
+  box-shadow: 1px 2px 2px #dadada, -1px 2px 1px #dadada;
+  border: 1px solid white;
+}
+
+.gradListUl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  margin-top: 2rem;
+  margin: auto;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .search_fields_sc {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .search_fields_sc input {
+    width: 100%;
+  }
+
+  .search_fields_sc select {
+    width: 100%;
+  }
+
+  .gradListUl {
+    transform: scale(0.9);
+  }
+}
+
+/* Container for the button */
+.buttonContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style for the "Add New Trainee" button */
+.addButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  /* Green button */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.addButton:hover {
+  background-color: #147019;
+}
+
+/* Responsive styling for the button */
+@media (max-width: 768px) {
+  .addButton {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
