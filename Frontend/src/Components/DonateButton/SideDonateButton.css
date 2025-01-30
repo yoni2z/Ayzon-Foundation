@@ -21,7 +21,6 @@
 
 .sidedonate-btn.show {
   opacity: 1;
-  right: 10px; /* Slightly move it inward when visible */
 }
 
 .sidedonate-btn:hover {

@@ -168,9 +168,9 @@ export const Home = () => {
             </li>
           </ul>
           <div className="home-container-whoweare-container-content">
-            <div className="home-container-whoweare-container-content-image">
+            {/* <div className="home-container-whoweare-container-content-image">
               <img src={homepage_whoweare} alt="" />
-            </div>
+            </div> */}
 
             <div className="home-container-whoweare-container-content-description">
               <p>
