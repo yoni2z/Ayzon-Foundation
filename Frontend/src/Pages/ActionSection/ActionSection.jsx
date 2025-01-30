@@ -37,7 +37,7 @@ function ActionSection() {
           alt="Ayzon Foundation Background"
           className="background-image"
         />
-        <h1>Take Action</h1>
+        <h1>TAKE ACTION</h1>
       </div>
 
       <section className="action-container">

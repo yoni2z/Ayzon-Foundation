@@ -22,7 +22,7 @@
     margin-top: 10rem !important;
   }
 
-  .home-container-whoweare-container-content-image>img {
+  .home-container-whoweare-container-content-image > img {
     width: 100% !important;
   }
 
@@ -41,7 +41,7 @@
     text-align: center !important;
   }
 
-  .home-container-whoweare-container-content-description>p {
+  .home-container-whoweare-container-content-description > p {
     padding: 1rem 0 !important;
   }
 
@@ -99,7 +99,14 @@
     margin-bottom: 3rem !important;
   }
 
-  #root>div>div.home-container>div.home-container-contactus>div>div.home-container-contactus-form-left>div.home-container-contactus-form-left-texts>p:nth-child(2) {
+  #root
+    > div
+    > div.home-container
+    > div.home-container-contactus
+    > div
+    > div.home-container-contactus-form-left
+    > div.home-container-contactus-form-left-texts
+    > p:nth-child(2) {
     margin-bottom: 54px !important;
   }
 
@@ -114,7 +121,18 @@
 
 .video-section {
   text-align: center;
-  margin: 10px 0px;
+  margin: 20px 0px;
+}
+
+.video-section img {
+  margin-top: 0px;
+  height: 0.3rem;
+  width: 15rem;
+}
+
+.video-section-title {
+  font: 40px "Playfair Display", serif;
+  margin: 0px;
 }
 
 .video-title {
@@ -180,7 +198,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-.she-can-card-image>img {
+.she-can-card-image > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -243,13 +261,13 @@
   margin-top: 102px;
 }
 
-.home-container-hero-texts>a,
+.home-container-hero-texts > a,
 h1,
 p {
   color: #ffffff;
 }
 
-.home-container-hero-texts>h1 {
+.home-container-hero-texts > h1 {
   font: 45px "Playfair Display";
   font-weight: 100;
   margin: 0px;
@@ -260,7 +278,7 @@ p {
   opacity: 0.9;
 }
 
-.home-container-hero-texts>p {
+.home-container-hero-texts > p {
   font: 14px "Montserrat", serif;
   font-weight: 250;
   text-align: justify;
@@ -269,7 +287,7 @@ p {
   margin: 12px 0;
 }
 
-.home-container-hero-texts>a {
+.home-container-hero-texts > a {
   font: 15px "Montserrat", serif;
   background-color: #ff5349;
   padding: 13px 9px;
@@ -309,7 +327,7 @@ p {
   width: 50%;
 }
 
-.home-container-whoweare-container-content-image>img {
+.home-container-whoweare-container-content-image > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -322,21 +340,21 @@ p {
   flex-direction: column;
 }
 
-.home-container-whoweare-container-content-description>p {
+.home-container-whoweare-container-content-description > p {
   color: black;
 }
 
-.home-container-whoweare-container-content-description>a {
+.home-container-whoweare-container-content-description > a {
   color: black;
   background-color: #ff5349;
   padding: 8px 12px;
 }
 
-.home-container-whoweare-container-content-description>p {
+.home-container-whoweare-container-content-description > p {
   text-align: justify;
 }
 
-.home-container-whoweare-container-content-description>a {
+.home-container-whoweare-container-content-description > a {
   color: white;
   width: fit-content;
   background-color: #ff5349;
@@ -373,12 +391,12 @@ p {
   margin: 0px;
 }
 
-.home-container-projecthighlights>ul>li>img,
-.home-container-whoweare>ul>li>img,
-.home-container-founder>ul>li>img,
-.home-container-news>ul>li>img,
-.home-container-contactus>ul>li>img,
-.home-container-whoweare-container>ul>li>img {
+.home-container-projecthighlights > ul > li > img,
+.home-container-whoweare > ul > li > img,
+.home-container-founder > ul > li > img,
+.home-container-news > ul > li > img,
+.home-container-contactus > ul > li > img,
+.home-container-whoweare-container > ul > li > img {
   margin-top: 0px;
   height: 0.3rem;
   width: 15rem;
@@ -404,10 +422,10 @@ p {
   height: 100%;
 }
 
-.home-container-projecthighlights-more>a {
+.home-container-projecthighlights-more > a {
   color: white;
   width: 40%;
-  background-color: #ff5349;;
+  background-color: #ff5349;
   text-align: center;
   margin: 5px 0px 8px 0px;
   font: 14px "Montserrat", serif;
@@ -425,7 +443,7 @@ p {
   margin: 0px;
 }
 
-.home-container-stats>ul {
+.home-container-stats > ul {
   list-style: none;
   color: white;
 }
@@ -448,7 +466,13 @@ p {
   margin-top: 3rem;
 }
 
-#root>div>div.home-container>div.home-container-founder>div>div.home-container-content-quote>a {
+#root
+  > div
+  > div.home-container
+  > div.home-container-founder
+  > div
+  > div.home-container-content-quote
+  > a {
   color: white;
   background-color: #ff5349;
   text-align: center;
@@ -478,7 +502,7 @@ p {
   height: 85%;
 }
 
-.home-container-founder-content-shalom-image>img {
+.home-container-founder-content-shalom-image > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -488,20 +512,20 @@ p {
   margin-top: 15px;
 }
 
-.home-container-founder-content-shalom-profile>p,
+.home-container-founder-content-shalom-profile > p,
 h3 {
   color: black;
   text-align: center;
   padding: 0px;
 }
 
-.home-container-founder-content-shalom-profile>p {
+.home-container-founder-content-shalom-profile > p {
   font: 16px "Montserrat", serif;
   font-weight: 530;
   margin-top: 15px;
 }
 
-.home-container-founder-content-shalom-profile>h3 {
+.home-container-founder-content-shalom-profile > h3 {
   font: 19px "Playfair Display";
   font-weight: bold;
 }
@@ -537,7 +561,7 @@ h3 {
   }
 }
 
-.home-container-content-quote>p {
+.home-container-content-quote > p {
   line-height: 1.3;
   text-align: justify;
   margin-bottom: 20px;
@@ -596,7 +620,7 @@ h3 {
   margin-top: 3rem;
 }
 
-.home-container-contactus-form-left-texts>p {
+.home-container-contactus-form-left-texts > p {
   font: 14px "Montserrat", sans-serif;
   letter-spacing: 1.26px;
   line-height: 1;
@@ -613,7 +637,7 @@ h3 {
   gap: 30px;
 }
 
-.home-container-contactus-form-right>div {
+.home-container-contactus-form-right > div {
   display: flex;
   flex-direction: column;
   font: 14px "Montserrat", serif;
@@ -676,7 +700,7 @@ h3 {
   margin-top: 3em;
 }
 
-.home-container-contactus-form-left-texts>p {
+.home-container-contactus-form-left-texts > p {
   color: black;
   margin-bottom: 40px;
   display: flex;
@@ -705,7 +729,7 @@ h3 {
 
 .home-container-trademark {
   margin: 0px;
-  background-color: rgba(0, 0, 0, 0.918);
+  background-color: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;

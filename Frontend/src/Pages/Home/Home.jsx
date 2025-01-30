@@ -192,6 +192,14 @@ export const Home = () => {
       </div>
 
       <div className="video-section">
+        <ul>
+          <li>
+            <h2 className="video-section-title">WHO IS AYZON</h2>
+          </li>
+          <li>
+            <img src={menufooter} alt="" />
+          </li>
+        </ul>
         <div className="video-containers">
           <iframe
             className="responsive-video"
@@ -353,7 +361,9 @@ export const Home = () => {
                 Next to British School, 205,Tegela Building, Africa Ave, Addis
                 Ababa
               </p>
-              <p style={{ marginBottom: "29px" }}>+25193881111</p>
+              <p style={{ marginBottom: "29px" }}>
+                +251944694469 or +251933940094
+              </p>
               <p style={{ marginBottom: "5px" }}>info@ayzonfoundation.org</p>
             </div>
           </div>

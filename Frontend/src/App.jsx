@@ -32,11 +32,13 @@ import ChangePassword from "./Pages/ChangePassword/ChangePassword";
 import Gallery from "./Pages/Gallery/Gallery";
 import MeetTheFounder from "./Pages/meet-the-founder/MeetTheFounder";
 import ScrollToTopButton from "./Components/ScrollToTop/ScrollToTop";
+import DonateButton from "./Components/DonateButton/SideDonateButton";
 // import VolunteerForm from "./Pages/Volunteer_Form/VolunteerForm";
 
 import ItemList from "./Pages/Shop_Page/layouts/ItemList/ItemList";
 import ItemDetails from "./Pages/Shop_Page/components/ItemDetails/ItemDetails";
 import CategoryDisplay from "./Pages/Shop_Page/components/ProductDisplay/ProductDisplay";
+import SideDonateButton from "./Components/DonateButton/SideDonateButton";
 
 function AppContent() {
   const location = useLocation();
@@ -109,6 +111,7 @@ function AppContent() {
       </Routes>
       <ScrollToTopButton />
       <Footer />
+      <SideDonateButton />
     </div>
   );
 }
