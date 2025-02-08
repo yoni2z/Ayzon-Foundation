@@ -135,13 +135,13 @@ export const Navbar = () => {
           </li>
           <li>
             <Link to="/actions" onClick={closeMenu}>
-              TAKE ACTION
+              GET INVOLVED
             </Link>
           </li>
         </ul>
-        <a className="donate-btn" onClick={closeMenu}>
-          DONATE
-        </a>
+        <Link to="/actions" onClick={closeMenu}>
+          <a className="donate-btn">DONATE</a>
+        </Link>
       </div>
     </div>
   );

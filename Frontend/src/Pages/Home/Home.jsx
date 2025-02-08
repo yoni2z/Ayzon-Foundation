@@ -152,7 +152,14 @@ export const Home = () => {
             SPREAD JOY?
           </h1>
           <p>BEYOND COMFORTING WORDS</p>
-          <a>DONATE</a>
+          <div className="hero-buttons">
+            <Link to="/actions">
+              <a>DONATE</a>
+            </Link>
+            <Link to="/actions">
+              <a>GET INVOLVED</a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="home-container-whoweare">
@@ -216,24 +223,6 @@ export const Home = () => {
         </ul>
 
         <div className="home-container-projecthighlights-projects">
-          <Link
-            className="she-can-card"
-            to="/shecan"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            <div className="she-can-card-image">
-              <img src={shecan} alt="She Can" />
-            </div>
-            <div className="she-can-card-content">
-              <h2 className="she-can-card-title">SHE CAN</h2>
-              <p className="she-can-card-description">
-                Empowering women to achieve greatness.
-              </p>
-            </div>
-          </Link>
-
           {projects.map((project) => (
             <Projectcard
               key={project.id}

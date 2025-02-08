@@ -11,7 +11,7 @@ function Blog() {
             alt="Ayzon Foundation Blog Image"
             className="background-image-blog"
           />
-          <h1>Blogs</h1>
+          <h1>BLOGS</h1>
         </div>
       </>
     );

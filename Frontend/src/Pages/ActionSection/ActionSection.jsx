@@ -30,17 +30,20 @@ function ActionSection() {
   const isDonateButtonActive = donationAmount !== "";
 
   return (
-    <section>
+    <section style={{ backgroundColor: "white" }}>
       <div className="action-section">
         <img
           src={takeaction}
           alt="Ayzon Foundation Background"
           className="background-image"
         />
-        <h1>Take Action</h1>
+        <h1>GET INVOLVED</h1>
       </div>
 
-      <section className="action-container">
+      <section
+        className="action-container"
+        style={{ backgroundColor: "#f2f2f2" }}
+      >
         <h1 style={{ color: "black" }}>Donate to Ayzon Foundation</h1>
 
         <div className="tab-buttons">
@@ -108,7 +111,7 @@ function ActionSection() {
       </section>
 
       <section className="donate-in-kind-section">
-        <h1 style={{ color: "black" }}>Donate in Kind</h1>
+        <h1 style={{ color: "#333" }}>Donate in Kind</h1>
         <div className="donate-in-kind">
           {[
             {
@@ -161,8 +164,10 @@ function ActionSection() {
       </section>
 
       <section className="noMoney-section">
-        <h2>You don't have money to donate now?</h2>
-        <p>You can still help us!</p>
+        <h2 style={{ color: "#333" }}>
+          Not in a position to donate right now?
+        </h2>
+        <p style={{ color: "#333" }}>You can still help us!</p>
       </section>
       <section className="full-width-section">
         <h2>Lend us a property</h2>
@@ -183,7 +188,7 @@ function ActionSection() {
         </a>
       </section>
       <section className="full-width-section">
-        <h2>Donate you Service</h2>
+        <h2 style={{ color: "#333" }}>Donate you Service</h2>
         <p>
           Are you skilled in a profession or trade that could benefit the
           community? Donating your time and service can have an incredible
@@ -202,7 +207,7 @@ function ActionSection() {
         </a>
       </section>
       <section className="full-width-section">
-        <h2>Suggest how you can help us</h2>
+        <h2 style={{ color: "#333" }}>Suggest how you can help us</h2>
         <p>
           We believe that meaningful change comes from collaborative efforts and
           creative thinking. If you have a unique idea or approach to helping us
@@ -221,9 +226,13 @@ function ActionSection() {
         </a>
       </section>
 
-      <div id="buy-arts" className="second-section">
+      <div
+        id="buy-arts"
+        className="second-section"
+        style={{ backgroundColor: "#f2f2f2" }}
+      >
         <div className="text-part">
-          <h2>Buy Arts & Support the Cause</h2>
+          <h2 style={{ color: "#333" }}>Buy Arts & Support the Cause</h2>
           <p>
             Check out our Photography Exhibition with – Genaye, a photographer
             based in Ethiopia who has shown us the effects of war and how we can
@@ -249,12 +258,16 @@ function ActionSection() {
         </div>
       </div>
 
-      <div id="buy-plants" className="second-section">
+      <div
+        id="buy-plants"
+        className="second-section"
+        style={{ backgroundColor: "#f2f2f2" }}
+      >
         <div>
           <img src={flower} alt="Ayzon Foundation" />
         </div>
         <div className="text-part">
-          <h2>Buy Plants & Flowers</h2>
+          <h2 style={{ color: "#333" }}>Buy Plants & Flowers</h2>
           <p>
             At Blossom Haven, verdant leaves and vibrant petals dance in
             harmony, creating a symphony of colors and scents that captivate the
@@ -271,21 +284,35 @@ function ActionSection() {
         </div>
       </div>
 
-      <div id="donor-memberships" className="large-section">
-        <h2>Donor Memberships</h2>
+      <div
+        id="donor-memberships"
+        className="large-section"
+        style={{ backgroundColor: "white" }}
+      >
+        <h2 style={{ color: "#333" }}>Donor Memberships</h2>
         <p>
           Would you like to contribute by donating on a regular basis? As a
           donor member, you’ll have access to information ensuring that gifts
           are allocated appropriately. We’ll provide you with a letter and
           materials to remind you that you are part of our family.
         </p>
-        <a href="#" className="btn-link">
+        <Link
+          to="/actions"
+          className="btn-link"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           Donate
-        </a>
+        </Link>
       </div>
 
-      <div id="volunteer-memberships" className="large-section">
-        <h2>Volunteer Memberships</h2>
+      <div
+        id="volunteer-memberships"
+        className="large-section"
+        style={{ backgroundColor: "white" }}
+      >
+        <h2 style={{ color: "#333" }}>Volunteer Memberships</h2>
         <p>
           Would you like to contribute to the vision and collaborate with others
           passionate about accelerating our nation’s development? Join us and
