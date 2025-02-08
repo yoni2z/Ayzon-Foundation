@@ -269,12 +269,17 @@ p {
   margin: 12px 0;
 }
 
-.home-container-hero-texts>a {
+.home-container-hero-texts>div {
+  display: flex;
+
+}
+
+.home-container-hero-texts>div>a {
   font: 15px "Montserrat", serif;
   background-color: #ff5349;
   padding: 13px 9px;
   cursor: pointer;
-  margin: 3px;
+  margin: 3px 5px;
   width: fit-content;
   text-align: center;
   font-weight: 600;

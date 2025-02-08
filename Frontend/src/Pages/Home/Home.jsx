@@ -94,7 +94,10 @@ export const Home = () => {
         const allProjects = response.data;
 
         // Randomly select 3 projects
-        const randomProjects = getRandomProjects(allProjects, 3);
+        const randomProjects = getSpecificProjects(
+          allProjects,
+          [7, 4, 15, 12]
+        );
 
         setProjects(randomProjects);
         setLoading(false);
@@ -105,10 +108,10 @@ export const Home = () => {
       });
   }, []);
 
-  // Function to randomly select 'n' projects from the given list
-  const getRandomProjects = (projectsArray, n) => {
-    const shuffled = [...projectsArray].sort(() => 0.5 - Math.random()); // Shuffle the array
-    return shuffled.slice(0, n); // Return the first 'n' projects from the shuffled array
+  const getSpecificProjects = (projectsArray, ids) => {
+    return ids
+      .map((id) => projectsArray.find((project) => project.id === id))
+      .filter(Boolean); // Remove any undefined values in case an ID isn't found
   };
 
   const truncateText = (text, length) => {
@@ -152,7 +155,14 @@ export const Home = () => {
             SPREAD JOY?
           </h1>
           <p>BEYOND COMFORTING WORDS</p>
-          <a>DONATE</a>
+          <div className="hero-buttons">
+            <Link to="/actions">
+              <a>DONATE</a>
+            </Link>
+            <Link to="/actions">
+              <a>GET INVOLVED</a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="home-container-whoweare">
@@ -216,24 +226,6 @@ export const Home = () => {
         </ul>
 
         <div className="home-container-projecthighlights-projects">
-          <Link
-            className="she-can-card"
-            to="/shecan"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            <div className="she-can-card-image">
-              <img src={shecan} alt="She Can" />
-            </div>
-            <div className="she-can-card-content">
-              <h2 className="she-can-card-title">SHE CAN</h2>
-              <p className="she-can-card-description">
-                Empowering women to achieve greatness.
-              </p>
-            </div>
-          </Link>
-
           {projects.map((project) => (
             <Projectcard
               key={project.id}
@@ -353,8 +345,31 @@ export const Home = () => {
                 Next to British School, 205,Tegela Building, Africa Ave, Addis
                 Ababa
               </p>
-              <p style={{ marginBottom: "29px" }}>+25193881111</p>
-              <p style={{ marginBottom: "5px" }}>info@ayzonfoundation.org</p>
+              <p style={{ marginBottom: "29px" }}>
+                <a
+                  href="tel:+25193881111"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  onMouseOver={(e) =>
+                    (e.target.style.textDecoration = "underline")
+                  }
+                  onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+                >
+                  +25193881111
+                </a>
+              </p>
+
+              <p style={{ marginBottom: "5px" }}>
+                <a
+                  href="mailto:info@ayzonfoundation.org"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                  onMouseOver={(e) =>
+                    (e.target.style.textDecoration = "underline")
+                  }
+                  onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+                >
+                  info@ayzonfoundation.org
+                </a>
+              </p>
             </div>
           </div>
           <div
@@ -374,6 +389,7 @@ export const Home = () => {
                   id="name"
                   name="name" // Matches {{name}} in your template
                   placeholder="Enter your name please"
+                  style = {{fontFamily: 'Montserrat'}}
                   required
                 />
               </div>
@@ -384,6 +400,7 @@ export const Home = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email please"
+                  style = {{fontFamily: 'Montserrat'}}
                   required
                 />
               </div>
@@ -393,6 +410,7 @@ export const Home = () => {
                   id="description"
                   name="description"
                   placeholder="Enter your message here"
+                  style = {{fontFamily: 'Montserrat'}}
                   required
                 ></textarea>
               </div>

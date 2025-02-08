@@ -251,7 +251,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="home-container-trademark">
-        &copy; {new Date().getFullYear()} Ayzon Foundation All rights reserved
+        &copy; {new Date().getFullYear()} Ayzon Foundation All rights reserved.
       </div>
     </>
   );

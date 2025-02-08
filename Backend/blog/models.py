@@ -376,3 +376,30 @@ class Volunteer(models.Model):
         return f"{self.first_name} {self.fathers_name}"
     
 ### --------------- Volunteer Form End ---------------- ###
+
+### --------------- Partners ---------------- ###
+
+class Partner(models.Model):
+    name = models.CharField(max_length=200)
+    logo = models.ImageField(upload_to="sponsor_logos")
+
+    def __str__(self):
+        return self.name
+    
+### --------------- Partners End ---------------- ###
+
+### --------------- Board Member ---------------- ###
+
+class BoardMember(models.Model):
+    full_name = models.CharField(max_length=255)
+    position = models.CharField(max_length=255)
+    picture = models.ImageField(upload_to='board_members/', blank=True, null=True)
+    description = models.TextField()
+    email = models.EmailField()
+    facebook = models.CharField(max_length=255, blank=True, null=True)
+    linkedin = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return self.full_name
+    
+### --------------- Board Member End ---------------- ###

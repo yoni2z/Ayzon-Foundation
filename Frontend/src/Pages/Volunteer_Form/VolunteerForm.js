@@ -86,8 +86,8 @@ const VolunteerForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <h1>Ayzon Foundation Volunteer Form</h1>
+      <form className="volunteer-form" onSubmit={handleSubmit}>
+        <h1 className="volunteer_header">Ayzon Foundation Volunteer Form</h1>
         <div>
           <label>First Name:</label>
           <input
@@ -337,7 +337,7 @@ const VolunteerForm = () => {
               ))}
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button className="volunteer-submit-button" type="submit">Submit</button>
       </form>
     </>
   );

@@ -27,7 +27,7 @@ import ChangePassword from "./Pages/ChangePassword/ChangePassword";
 import Gallery from "./Pages/Gallery/Gallery";
 import MeetTheFounder from "./Pages/meet-the-founder/MeetTheFounder";
 import ScrollToTopButton from "./Components/ScrollToTop/ScrollToTop";
-// import VolunteerForm from "./Pages/Volunteer_Form/VolunteerForm";
+import VolunteerForm from "./Pages/Volunteer_Form/VolunteerForm";
 
 import ItemList from "./Pages/Shop_Page/layouts/ItemList/ItemList";
 import ItemDetails from "./Pages/Shop_Page/components/ItemDetails/ItemDetails";
@@ -80,7 +80,7 @@ function AppContent() {
         <Route path="/change_password" element={<ChangePassword />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/meet-the-founder" element={<MeetTheFounder />} />
-        {/* <Route path="/volunteer_form" element={<VolunteerForm />} /> */}
+        <Route path="/volunteer_form" element={<VolunteerForm />} />
         <Route path="/shop" element={<ItemList />}>
           <Route path=":category" element={<CategoryDisplay />} />
           <Route path=":category/:id" element={<ItemDetails />} />

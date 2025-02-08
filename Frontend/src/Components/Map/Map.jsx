@@ -24,7 +24,6 @@ L.Icon.Default.mergeOptions({
 
 const Map = () => {
   const [selectedPosition, setSelectedPosition] = useState([51.505, -0.09]); // Default position
-  const [currentPosition, setCurrentPosition] = useState(null); // User's current location
   const [routingControl, setRoutingControl] = useState(null); // Routing control instance
   const [locations, setLocations] = useState([]); // Project locations
   const [mapStyle, setMapStyle] = useState({
@@ -37,33 +36,17 @@ const Map = () => {
     // Adjust the map height based on screen width
     const handleResize = () => {
       if (window.innerWidth <= 480) {
-        setMapStyle({
-          height: "300px", // Smaller height for very small screens
-          width: "100%",
-          marginTop: "3rem",
-        });
+        setMapStyle({ height: "300px", width: "100%", marginTop: "3rem" });
       } else if (window.innerWidth <= 768) {
-        setMapStyle({
-          height: "400px", // Adjust height for small screens
-          width: "100%",
-          marginTop: "3rem",
-        });
+        setMapStyle({ height: "400px", width: "100%", marginTop: "3rem" });
       } else {
-        setMapStyle({
-          height: "500px", // Default height
-          width: "100%",
-          marginTop: "3rem",
-        });
+        setMapStyle({ height: "500px", width: "100%", marginTop: "3rem" });
       }
     };
 
-    // Listen for resize events
     window.addEventListener("resize", handleResize);
-
-    // Call the function on mount to set initial size
     handleResize();
 
-    // Cleanup event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -74,7 +57,6 @@ const Map = () => {
     fetch("https://ayzonfoundation.org/api/project-details/")
       .then((response) => response.json())
       .then((data) => {
-        // Map through the data to format it for the map markers
         const projectLocations = data.map((project) => ({
           id: project.id,
           name: project.title,
@@ -85,35 +67,13 @@ const Map = () => {
       .catch((error) => {
         console.error("Error fetching project data:", error);
       });
-
-    // Get the user's current location
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setCurrentPosition([
-            position.coords.latitude,
-            position.coords.longitude,
-          ]);
-        },
-        (error) => {
-          console.error("Error getting current position:", error);
-        }
-      );
-    }
   }, []);
 
   // Custom component to handle marker click
   const MarkerWithRouting = ({ position, name }) => {
-    const map = useMap(); // This can now be called safely inside MarkerWithRouting
+    const map = useMap();
 
     const handleMarkerClick = () => {
-      if (!currentPosition) {
-        alert(
-          "Unable to get your current location. Please enable location services."
-        );
-        return;
-      }
-
       // Remove existing routing control if present
       if (routingControl) {
         routingControl.remove();
@@ -121,15 +81,11 @@ const Map = () => {
 
       // Add new routing control without instructions
       const newRoutingControl = L.Routing.control({
-        waypoints: [L.latLng(currentPosition), L.latLng(position)],
+        waypoints: [L.latLng(selectedPosition), L.latLng(position)],
         routeWhileDragging: true,
-        show: false, // Disable instructions panel
-        createMarker: function () {
-          return null; // Remove additional markers
-        },
-        lineOptions: {
-          styles: [{ color: "#3388ff", weight: 4 }], // Customize route line
-        },
+        show: false,
+        createMarker: () => null,
+        lineOptions: { styles: [{ color: "#3388ff", weight: 4 }] },
       }).addTo(map);
 
       newRoutingControl
@@ -145,7 +101,6 @@ const Map = () => {
           click: handleMarkerClick,
         }}
       >
-        {/* Tooltip will display above the marker */}
         <Tooltip direction="top" offset={[0, -20]} opacity={1}>
           {name}
         </Tooltip>
@@ -160,7 +115,7 @@ const Map = () => {
     useEffect(() => {
       if (locations.length > 0) {
         const bounds = L.latLngBounds(locations.map((loc) => loc.position));
-        map.fitBounds(bounds); // Adjust map to show all markers
+        map.fitBounds(bounds);
       }
     }, [locations, map]);
 

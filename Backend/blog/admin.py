@@ -12,12 +12,16 @@ from .models import (
     PhotoGallery,
     Category, Product, ProductPhoto, ProductSize,
     Volunteer,
+    Partner,
+    BoardMember
 )
 # Register your models here.
 
 admin.site.register(Blog)
 admin.site.register(Sponsor)
 admin.site.register(InvitedGuest)
+admin.site.register(Partner)
+admin.site.register(BoardMember)
 class EventImageInline(admin.TabularInline):  # You can also use StackedInline
     model = EventImage
     extra = 1  
