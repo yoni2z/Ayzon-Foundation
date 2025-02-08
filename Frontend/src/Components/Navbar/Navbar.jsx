@@ -4,6 +4,7 @@ import AyzonLogo from "../../Assets/Images/Navbar/ayzon-logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa"; 
 import { PiEqualsLight } from "react-icons/pi";
 
 export const Navbar = () => {
@@ -139,6 +140,15 @@ export const Navbar = () => {
             </Link>
           </li>
         </ul>
+        <a
+          href="https://store.ayzonfoundation.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "100px" }}
+        >
+          <FaShoppingCart size={30} color="white" />{" "}
+          {/* Increased size to 30 */}
+        </a>
         <Link to="/actions" onClick={closeMenu}>
           <a className="donate-btn">DONATE</a>
         </Link>
