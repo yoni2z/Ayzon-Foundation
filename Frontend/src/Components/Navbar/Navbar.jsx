@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { PiEqualsLight } from "react-icons/pi";
+import { FaShoppingCart } from "react-icons/fa";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
