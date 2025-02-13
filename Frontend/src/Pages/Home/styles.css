@@ -121,7 +121,7 @@
 
 .video-section {
   text-align: center;
-  margin: 20px 0px;
+  margin: 3rem 0px;
 }
 
 .video-section img {
@@ -287,7 +287,7 @@ p {
   margin: 12px 0;
 }
 
-.home-container-hero-texts > a {
+.home-container-hero-texts > div > a {
   font: 15px "Montserrat", serif;
   background-color: #ff5349;
   padding: 13px 9px;
