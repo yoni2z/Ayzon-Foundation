@@ -184,11 +184,11 @@ export const Home = () => {
                 Ayzon Foundation is a non-profit organization in Ethiopia that
                 addresses various societal issues in line with the United
                 Nations Sustainable Development Goals (SDGs), collaborating with
-                over 300 volunteers. The organization is licensed under the
-                Federal Democratic Republic of Ethiopia under ACSO (Authority
-                for Civil Society Organization, Ethiopia) with registration
-                number 6336. It is committed to making a positive impact in the
-                community.
+                over 300 volunteers. <br></br>
+                The organization is licensed under the Federal Democratic
+                Republic of Ethiopia under ACSO (Authority for Civil Society
+                Organization, Ethiopia) with registration number 6336. <br></br>
+                It is committed to making a positive impact in the community.
               </p>
               <Link to={`/who-we-are`}>
                 <a>LEARN MORE</a>
@@ -201,7 +201,7 @@ export const Home = () => {
       <div className="video-section">
         <ul>
           <li>
-            <h2 className="video-section-title">WHO IS AYZON</h2>
+            <h2 className="video-section-title">WHO IS AYZON?</h2>
           </li>
           <li>
             <img src={menufooter} alt="" />
@@ -403,7 +403,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 };
