@@ -186,7 +186,7 @@ const Footer = () => {
                 </div>
                 <div className="Phone_container">
                   <CiPhone className="icon" />
-                  <p>+25193881111</p>
+                  <p>+251944694469 or +251933940094</p>
                 </div>
                 <div className="Email_container">
                   <TfiEmail
@@ -251,7 +251,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="home-container-trademark">
-        &copy; {new Date().getFullYear()} Ayzon Foundation All rights reserved.
+        &copy; {new Date().getFullYear()} Ayzon Foundation. All Rights Reserved.
       </div>
     </>
   );

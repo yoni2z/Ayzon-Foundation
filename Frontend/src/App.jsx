@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "./index.css";
 import ActionSection from "./Pages/ActionSection/ActionSection";
 import Blog from "./Pages/Blog/Blog";
@@ -27,11 +32,13 @@ import ChangePassword from "./Pages/ChangePassword/ChangePassword";
 import Gallery from "./Pages/Gallery/Gallery";
 import MeetTheFounder from "./Pages/meet-the-founder/MeetTheFounder";
 import ScrollToTopButton from "./Components/ScrollToTop/ScrollToTop";
-import VolunteerForm from "./Pages/Volunteer_Form/VolunteerForm";
+import DonateButton from "./Components/DonateButton/SideDonateButton";
+// import VolunteerForm from "./Pages/Volunteer_Form/VolunteerForm";
 
 import ItemList from "./Pages/Shop_Page/layouts/ItemList/ItemList";
 import ItemDetails from "./Pages/Shop_Page/components/ItemDetails/ItemDetails";
 import CategoryDisplay from "./Pages/Shop_Page/components/ProductDisplay/ProductDisplay";
+import SideDonateButton from "./Components/DonateButton/SideDonateButton";
 
 function AppContent() {
   const location = useLocation();
@@ -44,7 +51,7 @@ function AppContent() {
       {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/actions" element={<ActionSection />} />
+        <Route path="/getinvolved" element={<ActionSection />} />
         <Route
           path="/blogs"
           element={
@@ -104,6 +111,7 @@ function AppContent() {
       </Routes>
       <ScrollToTopButton />
       <Footer />
+      <SideDonateButton />
     </div>
   );
 }

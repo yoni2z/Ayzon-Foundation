@@ -94,10 +94,7 @@ export const Home = () => {
         const allProjects = response.data;
 
         // Randomly select 3 projects
-        const randomProjects = getSpecificProjects(
-          allProjects,
-          [7, 4, 15, 12]
-        );
+        const randomProjects = getRandomProjects(allProjects, 3);
 
         setProjects(randomProjects);
         setLoading(false);
@@ -178,9 +175,9 @@ export const Home = () => {
             </li>
           </ul>
           <div className="home-container-whoweare-container-content">
-            <div className="home-container-whoweare-container-content-image">
+            {/* <div className="home-container-whoweare-container-content-image">
               <img src={homepage_whoweare} alt="" />
-            </div>
+            </div> */}
 
             <div className="home-container-whoweare-container-content-description">
               <p>
@@ -202,6 +199,14 @@ export const Home = () => {
       </div>
 
       <div className="video-section">
+        <ul>
+          <li>
+            <h2 className="video-section-title">WHO IS AYZON</h2>
+          </li>
+          <li>
+            <img src={menufooter} alt="" />
+          </li>
+        </ul>
         <div className="video-containers">
           <iframe
             className="responsive-video"
@@ -346,30 +351,9 @@ export const Home = () => {
                 Ababa
               </p>
               <p style={{ marginBottom: "29px" }}>
-                <a
-                  href="tel:+25193881111"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  onMouseOver={(e) =>
-                    (e.target.style.textDecoration = "underline")
-                  }
-                  onMouseOut={(e) => (e.target.style.textDecoration = "none")}
-                >
-                  +25193881111
-                </a>
+                +251944694469 or +251933940094
               </p>
-
-              <p style={{ marginBottom: "5px" }}>
-                <a
-                  href="mailto:info@ayzonfoundation.org"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  onMouseOver={(e) =>
-                    (e.target.style.textDecoration = "underline")
-                  }
-                  onMouseOut={(e) => (e.target.style.textDecoration = "none")}
-                >
-                  info@ayzonfoundation.org
-                </a>
-              </p>
+              <p style={{ marginBottom: "5px" }}>info@ayzonfoundation.org</p>
             </div>
           </div>
           <div
@@ -389,7 +373,6 @@ export const Home = () => {
                   id="name"
                   name="name" // Matches {{name}} in your template
                   placeholder="Enter your name please"
-                  style = {{fontFamily: 'Montserrat'}}
                   required
                 />
               </div>
@@ -400,7 +383,6 @@ export const Home = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email please"
-                  style = {{fontFamily: 'Montserrat'}}
                   required
                 />
               </div>
@@ -410,7 +392,6 @@ export const Home = () => {
                   id="description"
                   name="description"
                   placeholder="Enter your message here"
-                  style = {{fontFamily: 'Montserrat'}}
                   required
                 ></textarea>
               </div>

@@ -4,7 +4,6 @@ import AyzonLogo from "../../Assets/Images/Navbar/ayzon-logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa"; 
 import { PiEqualsLight } from "react-icons/pi";
 
 export const Navbar = () => {
@@ -135,7 +134,7 @@ export const Navbar = () => {
             )}
           </li>
           <li>
-            <Link to="/actions" onClick={closeMenu}>
+            <Link to="/getinvolved" onClick={closeMenu}>
               GET INVOLVED
             </Link>
           </li>

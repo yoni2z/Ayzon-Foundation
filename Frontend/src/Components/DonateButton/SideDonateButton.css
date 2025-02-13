@@ -1,0 +1,28 @@
+.sidedonate-btn {
+  position: fixed;
+  right: 0; /* Stick to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact centering */
+  background-color: #7f7f7f;
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  writing-mode: sideways-lr; /* Make text vertical */
+  letter-spacing: 2px;
+  text-orientation: upright;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, right 0.3s ease-in-out;
+  margin: 0;
+}
+
+.sidedonate-btn.show {
+  opacity: 1;
+}
+
+.sidedonate-btn:hover {
+  background-color: #ff5349;
+}

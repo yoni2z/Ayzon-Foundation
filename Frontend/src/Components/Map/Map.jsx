@@ -28,7 +28,7 @@ const Map = () => {
   const [locations, setLocations] = useState([]); // Project locations
   const [mapStyle, setMapStyle] = useState({
     height: "500px",
-    width: "100%",
+    width: "50%",
     marginTop: "3rem",
   });
 
