@@ -145,7 +145,7 @@
   min-height: 100vh;
   overflow: hidden;
   padding-top: 56.25%;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .responsive-video {
@@ -367,7 +367,7 @@ p {
   background-color: #e9e6e6;
   color: black;
   width: 100%;
-  padding: 40px 0px;
+  padding: 3rem 0px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -620,8 +620,9 @@ h3 {
 }
 
 #description {
-  padding: 5px 2rem 2rem 5px;
+  padding: 10px 10px 50px 10px;
   font-family: "Montserrat";
+  border: 1px solid #ccc;
 }
 
 .send {
@@ -720,7 +721,7 @@ h3 {
   display: flex;
   width: 100%;
   padding: 0px;
-  margin: 0px;
+  margin: 3rem 0px;
   position: relative;
   justify-content: space-between;
   align-items: center;
