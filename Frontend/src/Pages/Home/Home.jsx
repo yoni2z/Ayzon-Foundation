@@ -175,10 +175,6 @@ export const Home = () => {
             </li>
           </ul>
           <div className="home-container-whoweare-container-content">
-            {/* <div className="home-container-whoweare-container-content-image">
-              <img src={homepage_whoweare} alt="" />
-            </div> */}
-
             <div className="home-container-whoweare-container-content-description">
               <p>
                 Ayzon Foundation is a non-profit organization in Ethiopia that
