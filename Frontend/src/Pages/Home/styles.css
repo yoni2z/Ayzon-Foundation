@@ -272,15 +272,15 @@ p {
   text-align: justify;
   padding-left: 0;
   padding-top: 0;
-  margin: 12px 0;
+  margin: 12px 0 20px 0;
 }
 
 .home-container-hero-texts > div > a {
   font: 15px "Montserrat", serif;
   background-color: #ff5349;
-  padding: 13px 9px;
+  padding: 8px 9px;
+  margin: 3rem 13px 0 0;
   cursor: pointer;
-  margin: 3px 5px;
   width: fit-content;
   text-align: center;
   font-weight: 600;
