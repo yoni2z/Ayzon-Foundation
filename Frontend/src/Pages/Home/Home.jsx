@@ -94,7 +94,7 @@ export const Home = () => {
         const allProjects = response.data;
 
         // Randomly select 3 projects
-        const randomProjects = getSpecificProjects(allProjects, 3);
+        const randomProjects = getSpecificProjects(allProjects, [7, 4, 15, 12]);
 
         setProjects(randomProjects);
         setLoading(false);
