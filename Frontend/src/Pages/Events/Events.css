@@ -16,6 +16,7 @@
 
 .upcoming-event {
   margin-top: 60px;
+  margin-left: 60px;
   color: #333;
   font-family: "Montserrat";
   font-size: 1.4em;
@@ -280,4 +281,161 @@
 .events-page-button:hover {
   background-color: #ff5349;
   color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .event-card.half-width {
+    width: calc(50% - 20px);
+  }
+
+  .full-width-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .events-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .event-card.half-width {
+    width: 100%;
+  }
+
+  .event-img {
+    max-height: 300px;
+    max-width: 100%;
+  }
+
+  .event-img-1 {
+    max-height: 400px;
+    max-width: 100%;
+    margin-left: 40px;
+  }
+
+  .flip-countdown {
+    font-size: 1.8rem;
+  }
+
+  .flip-unit {
+    width: 50px;
+    height: 70px;
+  }
+
+  .register1-button,
+  .register-button {
+    width: 100%;
+  }
+
+  .subscribe-box {
+    max-width: 90%;
+  }
+
+  .upcoming-event {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+
+  .event-img {
+    max-height: 250px;
+  }
+
+  .event-title {
+    font-size: 20px;
+  }
+
+  .event-description,
+  .event-venue {
+    font-size: 14px;
+  }
+
+  .event1-title {
+    font-size: 32px;
+  }
+
+  .event1-description,
+  .event1-venue {
+    font-size: 18px;
+  }
+
+  .flip-countdown {
+    font-size: 1.5rem;
+  }
+
+  .flip-unit {
+    width: 40px;
+    height: 60px;
+  }
+
+  .subscribe-box {
+    width: 100%;
+  }
+
+  .subscribe-input {
+    width: 90%;
+  }
+
+  .subscribe-button {
+    width: 90%;
+  }
+
+  .events-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .event-title {
+    font-size: 18px;
+  }
+
+  .event-description,
+  .event-venue {
+    font-size: 12px;
+  }
+
+  .event1-title {
+    font-size: 28px;
+  }
+
+  .event1-description,
+  .event1-venue {
+    font-size: 16px;
+  }
+
+  .flip-countdown {
+    font-size: 1.2rem;
+  }
+
+  .flip-unit {
+    width: 35px;
+    height: 50px;
+  }
+
+  .events-container {
+    padding: 10px;
+  }
+
+  .subscribe-input {
+    width: 100%;
+  }
+
+  .subscribe-button {
+    width: 100%;
+  }
 }
