@@ -15,7 +15,9 @@ from .views import (
     login, change_password,
     PhotoGalleryViewSet,
     CategoryViewSet, ProductViewSet,
-    VolunteerViewSet, VolunteerChoicesAPIView
+    VolunteerViewSet, VolunteerChoicesAPIView,
+    PartnerViewSet,
+    BoardMemberViewSet
 )
 
 router = DefaultRouter()
@@ -25,6 +27,8 @@ router.register(r'products', ProductViewSet, basename='products')
 router.register(r'sponsors', SponsorViewSet, basename='sponsors')
 router.register(r'invited-guests', InvitedGuestViewSet, basename='invited-guests')
 router.register(r'volunteers', VolunteerViewSet, basename='volunteers')
+router.register(r'partners', PartnerViewSet, basename="partners")
+router.register(r'board-members', BoardMemberViewSet, basename="board-members")
 
 
 urlpatterns = [

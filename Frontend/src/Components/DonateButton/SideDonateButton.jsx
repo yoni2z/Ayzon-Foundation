@@ -17,7 +17,7 @@ const SideDonateButton = () => {
   return (
     <Link to="/getinvolved">
       <button className={`sidedonate-btn ${isVisible ? "show" : ""}`}>
-        Donate
+        DONATE
       </button>
     </Link>
   );

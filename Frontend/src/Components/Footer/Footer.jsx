@@ -59,12 +59,6 @@ const Footer = () => {
               className="home-container-footer-bio-email"
               onSubmit={handleSubscribe}
             >
-              <label
-                htmlFor="email"
-                style={{ fontWeight: "normal", width: "90vw" }}
-              >
-                Subscribe to Our Newsletter
-              </label>
               <input
                 type="email"
                 id="email"

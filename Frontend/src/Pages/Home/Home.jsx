@@ -94,7 +94,7 @@ export const Home = () => {
         const allProjects = response.data;
 
         // Randomly select 3 projects
-        const randomProjects = getRandomProjects(allProjects, 3);
+        const randomProjects = getSpecificProjects(allProjects, [7, 4, 15, 12]);
 
         setProjects(randomProjects);
         setLoading(false);
@@ -105,10 +105,10 @@ export const Home = () => {
       });
   }, []);
 
-  // Function to randomly select 'n' projects from the given list
-  const getRandomProjects = (projectsArray, n) => {
-    const shuffled = [...projectsArray].sort(() => 0.5 - Math.random()); // Shuffle the array
-    return shuffled.slice(0, n); // Return the first 'n' projects from the shuffled array
+  const getSpecificProjects = (projectsArray, ids) => {
+    return ids
+      .map((id) => projectsArray.find((project) => project.id === id))
+      .filter(Boolean); // Remove any undefined values in case an ID isn't found
   };
 
   const truncateText = (text, length) => {
@@ -152,7 +152,14 @@ export const Home = () => {
             SPREAD JOY?
           </h1>
           <p>BEYOND COMFORTING WORDS</p>
-          <a>DONATE</a>
+          <div className="hero-buttons">
+            <Link to="/actions">
+              <a>DONATE</a>
+            </Link>
+            <Link to="/actions">
+              <a>GET INVOLVED</a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="home-container-whoweare">
@@ -168,20 +175,16 @@ export const Home = () => {
             </li>
           </ul>
           <div className="home-container-whoweare-container-content">
-            {/* <div className="home-container-whoweare-container-content-image">
-              <img src={homepage_whoweare} alt="" />
-            </div> */}
-
             <div className="home-container-whoweare-container-content-description">
               <p>
                 Ayzon Foundation is a non-profit organization in Ethiopia that
                 addresses various societal issues in line with the United
                 Nations Sustainable Development Goals (SDGs), collaborating with
-                over 300 volunteers. The organization is licensed under the
-                Federal Democratic Republic of Ethiopia under ACSO (Authority
-                for Civil Society Organization, Ethiopia) with registration
-                number 6336. It is committed to making a positive impact in the
-                community.
+                over 300 volunteers. <br></br>
+                The organization is licensed under the Federal Democratic
+                Republic of Ethiopia under ACSO (Authority for Civil Society
+                Organization, Ethiopia) with registration number 6336. <br></br>
+                It is committed to making a positive impact in the community.
               </p>
               <Link to={`/who-we-are`}>
                 <a>LEARN MORE</a>
@@ -194,7 +197,7 @@ export const Home = () => {
       <div className="video-section">
         <ul>
           <li>
-            <h2 className="video-section-title">WHO IS AYZON</h2>
+            <h2 className="video-section-title">WHO IS AYZON?</h2>
           </li>
           <li>
             <img src={menufooter} alt="" />
@@ -224,24 +227,6 @@ export const Home = () => {
         </ul>
 
         <div className="home-container-projecthighlights-projects">
-          <Link
-            className="she-can-card"
-            to="/shecan"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            <div className="she-can-card-image">
-              <img src={shecan} alt="She Can" />
-            </div>
-            <div className="she-can-card-content">
-              <h2 className="she-can-card-title">SHE CAN</h2>
-              <p className="she-can-card-description">
-                Empowering women to achieve greatness.
-              </p>
-            </div>
-          </Link>
-
           {projects.map((project) => (
             <Projectcard
               key={project.id}
@@ -414,7 +399,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <Map />
+      {/* <Map /> */}
     </div>
   );
 };

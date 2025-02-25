@@ -68,6 +68,7 @@ const BlogList = () => {
 
   return (
     <>
+      <h4 className="intro-section-title">Recent Blogs</h4>
       <section className="intro-section">
         {blogs.length > 0 && (
           <>
@@ -84,8 +85,8 @@ const BlogList = () => {
             </div>
 
             <div className="intro-column right-column">
-              <h1>BLOGS HIGHLIGHT </h1>
-              {blogs.slice(7, 14).map((blog) => (
+              {/* <h1>BLOGS HIGHLIGHT </h1> */}
+              {blogs.slice(7, 10).map((blog) => (
                 <div key={blog.id} className="list-item">
                   <img
                     src={`${blog.image}`}
@@ -93,13 +94,21 @@ const BlogList = () => {
                     className="list-item-image"
                   />
                   <div className="list-item-content">
-                    <h5 className="list-item-title">{blog.title}</h5>
-                    <p
-                      className="list-item-description"
-                      style={{ color: "#26282A" }}
-                    >
-                      {truncateText(blog.description, 100)}
+                    <p className="list-item-meta">
+                      {blog.author}, {blog.date}
                     </p>
+                    <div className="list-item-text">
+                      <h5 className="list-item-title">{blog.title}</h5>
+                      <p
+                        className="list-item-description"
+                        style={{ color: "#26282A" }}
+                      >
+                        {truncateText(blog.description, 100)}
+                      </p>
+                    </div>
+                    <a href={`/blogs/${blog.id}`} className="read-more-btn">
+                      Read More
+                    </a>
                   </div>
                 </div>
               ))}
@@ -109,8 +118,8 @@ const BlogList = () => {
       </section>
 
       <div className="blogs-main-title">
-        <h1>BLOGS</h1>
-        <div className="search-sort-container">
+        <h5>All Blog Posts</h5>
+        {/* <div className="search-sort-container">
           <input
             type="text"
             placeholder="Search by title"
@@ -130,7 +139,7 @@ const BlogList = () => {
             <option value="name">Name</option>
             <option value="date">Date</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div className="blog-list">
         <div className="blog-grid">
@@ -139,8 +148,9 @@ const BlogList = () => {
               key={blog.id}
               id={blog.id}
               image={blog.image}
+              author={blog.author}
               title={blog.title}
-              date={blog.created_at}
+              date={blog.date}
               description={truncateText(blog.description, 100)}
             />
           ))}

@@ -20,7 +20,9 @@ from .models import (
     SheCanStudent,
     PhotoGallery,
     Category, Product, ProductPhoto, ProductSize,
-    Volunteer
+    Volunteer,
+    Partner,
+    BoardMember
     )
 from .serializers import (
     BlogSerializer,
@@ -29,7 +31,9 @@ from .serializers import (
     SheCanSerializer,
     PhotoGallerySerializer,
     CategorySerialzer, ProductSerialzer, ProductPhotoSerializer, ProductSizeSerialzer,
-    VolunteerSerializer
+    VolunteerSerializer,
+    PartnerSerializer,
+    BoardMemberSerializer
     )
 from rest_framework import generics, viewsets
 
@@ -273,3 +277,11 @@ class VolunteerChoicesAPIView(APIView):
             "team_choices": Volunteer.TEAM_CHOICES,
         }
         return Response(choices)
+    
+class PartnerViewSet(viewsets.ModelViewSet):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
+
+class BoardMemberViewSet(viewsets.ModelViewSet):
+    queryset = BoardMember.objects.all()
+    serializer_class = BoardMemberSerializer

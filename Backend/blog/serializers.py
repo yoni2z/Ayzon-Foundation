@@ -8,6 +8,8 @@ from .models import (
     PhotoGallery,
     Category, Product, ProductPhoto, ProductSize,
     Volunteer,
+    Partner,
+    BoardMember
     )
 
 class BlogSerializer(serializers.ModelSerializer):
@@ -160,3 +162,13 @@ class VolunteerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Volunteer
         fields = '__all__'
+
+class PartnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partner
+        fields = ['id', 'name', 'logo']
+
+class BoardMemberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BoardMember
+        fields = ['id', 'full_name', 'position', 'picture', 'description', 'email', 'facebook', 'linkedin']

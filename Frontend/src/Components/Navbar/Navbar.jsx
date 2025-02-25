@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { PiEqualsLight } from "react-icons/pi";
+import { FaShoppingCart } from "react-icons/fa";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -139,9 +140,18 @@ export const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <a className="donate-btn" onClick={closeMenu}>
-          DONATE
+        <a
+          href="https://store.ayzonfoundation.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "100px" }}
+        >
+          <FaShoppingCart size={30} color="white" />{" "}
+          {/* Increased size to 30 */}
         </a>
+        <Link to="/getinvolved" onClick={closeMenu}>
+          <a className="donate-btn">DONATE</a>
+        </Link>
       </div>
     </div>
   );

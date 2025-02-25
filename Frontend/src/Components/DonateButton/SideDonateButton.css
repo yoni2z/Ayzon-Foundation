@@ -5,10 +5,10 @@
   transform: translateY(-50%); /* Adjust for exact centering */
   background-color: #7f7f7f;
   color: white;
-  padding: 12px 12px;
+  padding: 12px 8px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: normal;
   writing-mode: sideways-lr; /* Make text vertical */
   letter-spacing: 2px;

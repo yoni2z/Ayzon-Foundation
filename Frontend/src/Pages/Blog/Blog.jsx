@@ -1,6 +1,6 @@
 import React from "react";
 import './Blog.css';
-import blogPic from '../../Assets/Images/Blog/blogs.jpg';
+import blogPic from '../../Assets/Images/Blog/blog.png';
 
 function Blog() {
     return (
@@ -11,7 +11,7 @@ function Blog() {
             alt="Ayzon Foundation Blog Image"
             className="background-image-blog"
           />
-          <h1>Blogs</h1>
+          <h1>BLOGS</h1>
         </div>
       </>
     );

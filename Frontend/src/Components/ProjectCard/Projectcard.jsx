@@ -18,6 +18,9 @@ export const Projectcard = ({ id, description, name, image, color }) => {
           to={`/project/${id}`}
           className="donate-button"
           style={{ backgroundColor: color }}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           DONATE
         </Link>
@@ -29,6 +32,9 @@ export const Projectcard = ({ id, description, name, image, color }) => {
           to={`/project/${id}`}
           className="projectcard-container-btn"
           style={{ backgroundColor: color }}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           LEARN MORE
         </Link>
