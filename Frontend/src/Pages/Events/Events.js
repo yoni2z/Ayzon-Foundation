@@ -86,7 +86,7 @@ function Events() {
                 <div className="event-img-1">
                   <img src={nextEvent.images[0].image} alt={nextEvent.title} />
                 </div>
-                <h1 className="upcoming-event">Events</h1>
+                {/* <h1 className="upcoming-event">Events</h1> */}
               </div>
               <div className="event-content">
                 <Countdown
@@ -129,6 +129,7 @@ function Events() {
       </div>
 
       {/* All Events Section */}
+      <h1 className="upcoming-event">Events</h1>
       <div className="events-container">
         {currentEvents.map((event, index) => (
           <div key={index} className="event-card half-width">
