@@ -149,7 +149,7 @@ export const Navbar = () => {
           <FaShoppingCart size={30} color="white" />{" "}
           {/* Increased size to 30 */}
         </a>
-        <Link to="/actions" onClick={closeMenu}>
+        <Link to="/getinvolved" onClick={closeMenu}>
           <a className="donate-btn">DONATE</a>
         </Link>
       </div>
